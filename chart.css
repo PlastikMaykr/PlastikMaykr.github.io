@@ -1,0 +1,49 @@
+
+/* #chart {
+    width: 100%;
+} 
+*/
+
+#⭕clockface {
+    overflow: visible;
+}
+
+#⭕timeIndicator {
+    stroke: red;
+    stroke-width: 1;
+}
+
+#⭕marks path {
+    opacity: 0.5;
+}
+
+#⭕hours text {
+    font-size: 0.65rem;
+    font-weight: 700;
+    opacity: 0.5;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+#⭕rings .⭕blocks path {
+    opacity: 0.85;
+}
+
+#⭕labels text {
+    fill: white;
+    font-size: 0.7rem;
+    text-anchor: start;
+}
+
+#⭕horizon div {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image:
+        conic-gradient(from 0deg,
+            #00000099 0.5%, #00000033 4%,
+            transparent 6%, transparent 94%,
+            #ffffff33 96%, #ffffff99 99.5%);
+    transition: opacity 1s;
+}

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DayDial</title>
+    <link rel="stylesheet" href="libs/gridstack.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="chart.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside id="control-panel">
+        <div class="filler"></div>
+        <article id="editor">
+            <header>
+                <h2>editor&nbsp;</h2>
+            </header>
+            <div class="collapsible">
+                <div class="drawer">
+                    <div class="grid neumorphism-caved">
+                        <section id="editor-make">
+                            <!-- block-create -->
+                            <div class="component"><button id="createBlock">Create</button></div>
+                            <!-- block-destroy -->
+                            <div class="component"><button id="destroyBlock">Destroy</button></div>
+                        </section>
+                        <section id="editor-basic" class="neumorphism-risen">
+                            <div class="text-component component">
+                                <span class="title">Name</span>
+                                <input id="nameSet" type="text" />
+                            </div>
+                            <div class="select-component component">
+                                <span class="title">Color</span>
+                                <select id="colorSelect">
+                                    <!-- <option value="">red</option>
+                                    <option value="">green</option>
+                                    <option value="">blue</option> -->
+                                </select>
+                            </div>
+                            <div class="select-component component">
+                                <span class="title">Column</span>
+                                <select id="columnSelect">
+                                    <option value="0">One</option>
+                                    <option value="1">Two</option>
+                                    <option value="2" hidden>Three</option>
+                                    <option value="3" hidden>Four</option>
+                                    <option value="4" hidden>Five</option>
+                                </select>
+                            </div>
+                        </section>
+                        <section id="editor-time">
+                            <div class="time-component component">
+                                <span class="title">Start</span>
+                                <button>-</button>
+                                <input id="startTime" type="text" value="00:00" />
+                                <button>+</button>
+                            </div>
+                            <div class="time-component component">
+                                <span class="title">Duration</span>
+                                <button>-</button>
+                                <input id="durTime" type="text" value="00:30" />
+                                <button>+</button>
+                            </div>
+                            <div class="time-component component">
+                                <span class="title">End</span>
+                                <button>-</button>
+                                <input id="endTime" type="text" value="00:30" />
+                                <button>+</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="chart-view">
+            <header>
+                <h2>view&nbsp;</h2>
+            </header>
+            <div class="collapsible">
+                <div class="drawer">
+                    <div class=" grid neumorphism-caved">
+                        <section id="chart-view-basic" class="neumorphism-risen">
+                            <div id="chart-fit" class="radio-component component">
+                                <span class="title">Fit</span>
+                                <input type="radio" name="chart-fit" id="chart-fit-width" checked>
+                                <label for="chart-fit-width">Width</label>
+                                <input type="radio" name="chart-fit" id="chart-fit-fit">
+                                <label for="chart-fit-fit">Fit</label>
+                                <input type="radio" name="chart-fit" id="chart-fit-max" disabled>
+                                <label for="chart-fit-max">Max</label>
+                            </div>
+                            <!-- dial-range -->
+                            <div id="dialRange" class="radio-component component">
+                                <span class="title">Range</span>
+                                <!-- chart-range-half -->
+                                <input type="radio" name="dial-range" id="halfDay" checked>
+                                <label for="halfDay">12H</label>
+                                <!-- chart-range-full -->
+                                <input type="radio" name="dial-range" id="fullDay">
+                                <label for="fullDay">24H</label>
+                            </div>
+                            <div id="dialDirection" class="radio-component component">
+                                <span class="title">Direction</span>
+                                <!-- chart-dir-noon -->
+                                <input type="radio" name="chart-dir" id="noonDir" checked>
+                                <label for="noonDir">00</label>
+                                <!-- chart-dir-now -->
+                                <input type="radio" name="chart-dir" id="nowDir">
+                                <label for="nowDir">Now</label>
+                                <!-- chart-dir-fixed -->
+                                <input type="radio" name="chart-dir" id="fixedDir">
+                                <label for="fixedDir">Fixed</label>
+                            </div>
+                        </section>
+                        <section id="chart-view-other">
+                            <div class="toggle-component component neumorphism-risen">
+                                <input type="checkbox" name="base-pie" id="base-pie" disabled>
+                                <label for="base-pie" disabled>Base ring</label>
+                            </div>
+                            <div id="time-Fixed" class="time-component component neumorphism-risen">
+                                <span class="title">Fixed</span>
+                                <button>-</button>
+                                <input id="fixedTime" type="text" value="00:00" />
+                                <button>+</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="data-mgmt">
+            <header>
+                <h2>save&sol;load&nbsp;</h2>
+            </header><!-- &#8659;&or;  -->
+            <div class="collapsible">
+                <div class="drawer">
+                    <div class="grid neumorphism-caved">
+                        <section id="data-mgmt-body">
+                            <div class="component"><button id="saveBlocks">Save</button></div>
+                            <div class="component"><button id="saveFile">Export</button></div>
+                            <div class="component"><button id="loadBlocks">Load</button></div>
+                            <div class="component"><button id="openFile">Import</button></div>
+                            <div class="component"><button id="resetBlocks">Reset</button></div>
+                            <div class="component"><button id="destroyBlocks" disabled>Destroy&nbsp;blocks</button></div>
+                        </section>
+                        <section id="data-mgmt-placeholder" class="neumorphism-risen">
+                            <i class="icon">&nbsp;</i>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div class="filler"></div>
+    </aside>
+
+    <main class="container">
+
+        <!-- <article id="calendar-container">
+            <header></header>
+            <article id="calendar">
+                <section></section>
+            </article>
+        </article> -->
+
+
+
+
+        <article id="leftPane"> <!-- calendar-container -->
+            <header id="calHead">
+                <div id="addColumn">
+                    <button id="addCol">|+|</button>
+                </div>
+                <div id="removeColumn">
+                    <button id="remCol">|-|</button>
+                    <button id="remCol">|-|</button>
+                </div>
+            </header>
+            <div id="calendar-container"> <!-- calendar -->
+                <section id="calendar"> <!-- section -->
+                    <div id="timeIndicator"></div>
+                    <div id="ruler"></div>
+                    <div class="grid-stack"></div>
+                    <div class="grid-stack"></div>
+                </section>
+            </div>
+        </article>
+
+
+
+
+
+        <div id="splitter"></div>
+        <article id="chart-container">
+
+
+            <!-- <figure id="clock-chart"></figure> -->
+
+            <svg id="⭕chart" width="100%" viewbox="0 0 202 202">
+                <title>Clock Chart</title>
+                <desc>Event blocks represented on a clockface</desc>
+                <svg id="⭕clockface" x="50%" y="50%">
+                    <defs>
+                        <line id="⭕timeIndicator" x1="0" y1="0" x2="0" y2="-99" />
+                    </defs>
+                </svg>
+            </svg>
+        
+        
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="neumorphism-risen"><a href="#" id="logos">
+                    DayDial
+                    <span>1.0.0&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                            <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z" />
+                        </svg>&nbsp;2023</span>
+                </a></p>
+            <!-- <p><a href="#" id="logos">DayDial 1.0.0&nbsp;<span>&copy;</span>&nbsp;2023</a></p> -->
+            <p><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC&nbsp;4.0</a></p>
+            <p><a href="#">GitHub page</a></p>
+            <!-- <p><a href="#" target="_blank">Twitter(?)</a></p> -->
+        </div>
+    </footer>
+    <dialog id="dialog-welcome">
+        <article>
+            <h3># Welcome to DayDial!</h3>
+            <br>
+            <p>DayDial is a fun and easy way to plan out your day! Allocate blocks of time to complete your tasks ⌚</p>
+            <br>
+            <p>With DayDial, you can:</p>
+            <ul>
+
+                <li>organize your activities based on the time boxing concept,</li>
+                <li>see your tasks on a clock chart—a clock face with rings vizualizing each activity,</li>
+                <li>easily add, delete, and move around blocks representing your tasks in a calendar-style grid.</li>
+            </ul>
+            <br>
+            <p>Ready to get started? Tap the button below and try it out!</p>
+            <p>Confused? Check out the <a href="#">User Guide</a></p>
+            <div class="component"><button>Close</button></div>
+
+
+
+        </article>
+    </dialog>
+
+    <!-- Libs -->
+    <script src="libs/jquery-3.5.1.js"></script>
+    <script src="libs/jqeury.inputmask.js"></script>
+    <script src="libs/gridstack-all.js"></script>
+    <script src="libs/d3.js"></script>
+
+    <!-- JS -->
+    <script src="./js/global.js" defer></script>
+    <script src="./js/serial.js" defer></script>
+    <script src="./js/events.js" defer></script>
+    <script src="./js/calendar.js" defer></script>
+    <script src="./js/chart.js" defer></script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        $(function () {
+            openWelcomeDialog();
+        });
+
+        // $('#element').on('keyup keypress blur change', function(e) {
+        //     // e.type is the type of event fired
+        // });
+
+
+        const $window = $(window);
+        const $controlPanel = $('#control-panel');
+        //TODO: implenent horizontal scrolling on control panel
+        // var item = document.getElementById("MAIN");
+
+        /** Control panel horizontal scrolling */
+        $controlPanel.on('wheel', function (event) {
+            console.log(event.originalEvent.deltaY);
+            if (event.originalEvent.deltaY > 0) {
+                this.scrollLeft += 100;
+            } else {
+                this.scrollLeft -= 100;
+            }
+        });
+
+
+        /** Accordion */
+        $('#control-panel article header').on('click', function () {
+            const $panel = $(this).closest('article');
+
+            $panel.toggleClass('collapse');
+            // console.log
+            if (!$panel.is(':first-of-type')) {
+
+                // $controlPanel.get(0).scrollWidth
+                // $controlPanel.scrollLeft
+                $controlPanel.animate({
+                    scrollLeft: 1000
+                }, 1000)
+            }
+
+            /* setTimeout(() => {
+                this.closest('article').scrollIntoView({
+                    behavior: 'smooth',
+                    inline: 'start'
+                })
+                // console.log("Delayed for 1 second.");
+            }, 750); */
+
+
+
+        });
+
+
+        /** Splitter */
+        const $main = $('main');
+        const $splitter = $('#splitter');
+
+        const MainColumns = {
+            windowWidth: 0,
+            mainWidth: 0,
+            mainXStart: 0,
+            /* main columns minimums in pixels */
+            minCalendarWidth: 450,
+            minChartWidth: 300,
+            /* ratio */
+            ratio: 0, // [0, 1] range
+            minRatio: 0,
+            maxRatio: 0,
+            ratioIsStiff: false, // boolean
+            updateWidths: function () {
+                this.windowWidth = $window.width();
+                this.mainWidth = $main.width();
+                this.mainXStart = $main.offset().left;
+                this.minRatio = this.minCalendarWidth / this.mainWidth;
+                this.maxRatio = (this.mainWidth - this.minChartWidth) / this.mainWidth;
+                this.ratioIsStiff = this.minRatio > this.maxRatio;
+            },
+            updateRatio: function (mouseX, mouseXOnSplitter) {
+                this.ratio =
+                    (mouseX - this.mainXStart - mouseXOnSplitter) / this.mainWidth;
+            },
+            updateCalendarWidth: function (mouseX, mouseXOnSplitter) {
+                const percent = this.ratio * 100;
+                $main.css('--calendar-width', `${percent}%`);
+            },
+            reset: function () {
+                this.ratio = 0.4;
+                $main.css('--calendar-width', '40%');
+                $main.css('--chart-width', '1fr');
+            },
+            resetChartWidth: function () {
+                if ($main.css('--chart-width') !== '1fr') {
+                    $main.css('--chart-width', '1fr');
+                }
+            },
+            collapse: function (column = 'smaller') {
+                this.ratio = Math.round(this.ratio);
+                console.log('RATIO: ' + this.ratio);
+                let fractions = [];
+                if (column === 'smaller') {
+                    if (this.ratio) {
+                        fractions = ['1fr', '0fr'];
+                    } else {
+                        fractions = ['0fr', '1fr'];
+                    }
+                } else if (column === 'bigger') {
+                    if (this.ratio) {
+                        fractions = ['0fr', '1fr'];
+                    } else {
+                        fractions = ['1fr', '0fr'];
+                    }
+                    MainColumns.ratio = 1 - MainColumns.ratio;
+                } // else return;
+
+                $main.css('--calendar-width', fractions[0]);
+                $main.css('--chart-width', fractions[1]);
+            }
+        }
+
+        $splitter.on('mousedown', function (event) {
+            let mouseX = event.pageX;
+
+            // const splitterWidth = $splitter.width();
+            const splitterXStart = $splitter.offset().left;
+            const mouseXOnSplitter = mouseX - splitterXStart;
+            // const mouseXonMain = 0;
+            // console.log(windowWidth,mouseX);
+
+            $window.on('mousemove', function (event) {
+                mouseX = event.pageX;
+
+                if (MainColumns.ratioIsStiff) {
+                    // console.log(mouseX,MainColumns.mainWidth);
+                    const divisor = 6
+                    if (mouseX > MainColumns.mainWidth / divisor &&
+                        mouseX < MainColumns.mainWidth * (divisor - 1) / divisor) {
+                        MainColumns.collapse('bigger');
+                        console.log('stiffRATIO: ' + MainColumns.ratio);
+                        $window.trigger('mouseup');
+                    }
+                    return;
+                }
+
+                MainColumns.updateRatio(mouseX, mouseXOnSplitter);
+                console.log(MainColumns.ratio);
+
+                /* check if mouse is over halfway from limits to main edge */
+                if (MainColumns.ratio < MainColumns.minRatio / 2 ||
+                    MainColumns.ratio > MainColumns.maxRatio + ((1 - MainColumns.maxRatio) / 2)) {
+                    MainColumns.collapse('smaller');
+                    return;
+                }
+
+                /* check if mouse is over limits to main edge */
+                if (MainColumns.ratio < MainColumns.minRatio) {
+                    MainColumns.ratio = MainColumns.minRatio;
+                    MainColumns.updateCalendarWidth();
+                    // return;
+                } else if (MainColumns.ratio > MainColumns.maxRatio) {
+                    // MainColumns.collapse('smaller');
+                    MainColumns.ratio = MainColumns.maxRatio;
+                    MainColumns.updateCalendarWidth();
+                    // return;
+                }
+
+                /* update main columns widths */
+                MainColumns.resetChartWidth();
+                MainColumns.updateCalendarWidth();
+
+                // $('body')[0].style.cursor = 'col-resize';
+
+            }).one('mouseup', function (event) {
+                // $('body')[0].style.cursor = '';
+                console.log('~ window.mouseup ~');
+                // $main.css('transition', '');
+                $window.off('mousemove');
+
+            })
+        }).on('dblclick', function (event) {
+            console.log('~ double click ~');
+            console.log('RATIO: ' + this.ratio);
+
+            if (MainColumns.ratioIsStiff) {
+                MainColumns.collapse('bigger');
+            } else {
+                if (Number.isInteger(MainColumns.ratio)) {
+                    MainColumns.reset();
+                } else {
+                    MainColumns.collapse('smaller');
+                }
+            }
+        });
+
+        $window.on('load resize', function (event) {
+            console.log(event.type);
+            MainColumns.updateWidths();
+            if (MainColumns.ratioIsStiff) {
+                MainColumns.collapse('smaller');
+            }
+            // TODO: detect if main can fit minCalendar + min Chart
+        });
+
+
+        /** Pop-up welcome dialog */
+        const $footer = $('footer');
+        const $logos = $('#logos');
+        const $logosOrigin = $('#logos span svg');
+        const $welcome = $('#dialog-welcome');
+        const $welcomeContent = $('#dialog-welcome article');
+
+        const dotGrow = 10; // px
+        const dialogEdge = 5; // vw
+
+        function openWelcomeDialog () {
+            const logosOrigin = {
+                top: $logosOrigin.offset().top,
+                bottom: $window.height() - $logosOrigin.height() - $logosOrigin.offset().top,
+                left: $logosOrigin.offset().left,
+                right: $window.width() - $logosOrigin.width() - $logosOrigin.offset().left
+            };
+
+            Object.entries(logosOrigin).forEach(([key, value]) => {
+                // console.log(key,value);
+                $welcome.css(`${key}`, `${value}px`);
+            });
+
+            $welcome.get(0).showModal();
+
+            $welcome
+                .animate({
+                    opacity: '1',
+                    top: `-=${dotGrow}px`,
+                    bottom: `-=${dotGrow}px`,
+                    left: `-=${dotGrow}px`,
+                    right: `-=${dotGrow}px`,
+                }, 500)
+                .animate({
+                    top: `${dialogEdge}vw`,
+                    bottom: `${$footer.height() * 2}px` // +25?
+                }, 350)
+                .animate({
+                    left: `${dialogEdge}vw`,
+                    right: `${dialogEdge}vw`
+                    // width: '90vw'
+                }, 400, function () {
+                    $welcomeContent
+                        .animate({
+                            opacity: '1'
+                        }, 400);
+                });
+        }
+
+        function closeWelcomeDialog (event) {
+            console.log('good-bye');
+            if (event.target === this) {
+                // $welcome.css('animation-play-state', 'running')
+                // $welcome.addClass('animate')
+
+
+                console.log($welcome.queue());
+                // $welcome.clearQueue();
+                $welcome.stop(true, false);
+                $welcomeContent.stop(true, false);
+
+                const logosOrigin = {
+                    top: $logosOrigin.offset().top,
+                    bottom: $window.height() - $logosOrigin.height() - $logosOrigin.offset().top,
+                    left: $logosOrigin.offset().left,
+                    right: $window.width() - $logosOrigin.width() - $logosOrigin.offset().left
+                };
+
+                $welcomeContent
+                    .animate({
+                        opacity: '0'
+                    }, 250, function () {
+                        $welcome
+                            .animate({
+                                left: `${logosOrigin.left - dotGrow}px`,
+                                right: `${logosOrigin.right - dotGrow}px`
+                            }, 300)
+                            .animate({
+                                bottom: `${logosOrigin.bottom - dotGrow}px`
+                            }, 250)
+                            .animate({
+                                top: `${logosOrigin.top - dotGrow}px`,
+                            }, 250)
+                            .animate({
+                                opacity: '0'
+                            }, 500, function () {
+                                $welcome.get(0).close();
+                                $welcome.attr('style', '');
+                                $welcomeContent.attr('style', '');
+                            });
+                    });
+            }
+        }
+
+        $logos.on('click', openWelcomeDialog);
+        // $('#dialog-welcome::backdrop').on('click', function () {
+        //     $welcome.get(0).close();
+        // });
+        $welcome.on('click', closeWelcomeDialog);
+        $welcome.find('button').on('click', closeWelcomeDialog);
+
+    //]]>
+    </script>
+</body>
+
+</html>
