@@ -7,10 +7,10 @@ __DayDial__ makes it possible to present and arrange your activities in two dist
 __DayDial__ is designed to help you manage your time more effectively by providing a visual representation of your schedule and tasks.
 
 ## Installation
-Go to https://daydial.github.io to use __DayDial__. No installation required. 
+Go to https://plastikmaykr.github.io to use __DayDial__. No installation required. 
 
 ## Documentation
-For detailed information on the functionalities and use cases for __DayDial__, see the [User Guide](./user_guide/HTML/webhelp-responsive/index.html).
+For detailed information on the functionalities and use cases for __DayDial__, see the [User Guide](https://plastikmaykr.github.io/user_guide/HTML/webhelp-responsive/index.html).
 
 ## Contributing
 This project is currently not open for contributions, but it will be in the near future. Please check back later for updates on how to get involved. In the meantime, we welcome all feedback. If you have questions or suggestions, let us know.
