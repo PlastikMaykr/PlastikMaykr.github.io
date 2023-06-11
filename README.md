@@ -10,7 +10,7 @@ __DayDial__ is designed to help you manage your time more effectively by providi
 Go to https://daydial.github.io to use __DayDial__. No installation required. 
 
 ## Documentation
-For detailed information on the functionalities and use cases for __DayDial__, see the [user guide](UG link).
+For detailed information on the functionalities and use cases for __DayDial__, see the [User Guide](./user_guide/HTML/webhelp-responsive/index.html).
 
 ## Contributing
 This project is currently not open for contributions, but it will be in the near future. Please check back later for updates on how to get involved. In the meantime, we welcome all feedback. If you have questions or suggestions, let us know.
@@ -23,5 +23,7 @@ DayDial 1.0.0 <span>&copy;</span> 2023
 
 ## Credit
 The web application was written by [PlastikMaykr](https://twitter.com/PlastikMaykr)
-The user guide was written by [ddyszkiewicz](https://github.com/ddyszkiewicz)
+
+The user guide was written by [ddyszkiewicz](https://linkedin.com/in/dariuszdyszkiewicz)
+
 Powered by the following libraries: [Jquery](https://jquery.com/) [D3.js](https://d3js.org/)
