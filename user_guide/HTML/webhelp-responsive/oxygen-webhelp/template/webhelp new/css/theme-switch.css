@@ -1,0 +1,69 @@
+.theme-switch-container {
+  padding: 0.5em 1em;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+/* The slider */
+.slider-container {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  cursor: pointer;
+}
+
+.light-theme {
+  color: #fff;
+}
+
+.dark-theme {
+  color: #041C32;
+}
+
+.slider {
+  position:relative;
+  display: block;
+  width: 26px;
+  height: 16px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 12px;
+  margin: 0 6px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #5c7bf0;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider-container .slider {
+  background-color: #041C32;
+}
+
+input:focus + .slider-container .slider {
+  box-shadow: 0 0 1px #041C32;
+}
+
+input:checked + .slider-container .slider:before {
+  transform: translateX(10px);
+  background-color: #ECB365;
+}

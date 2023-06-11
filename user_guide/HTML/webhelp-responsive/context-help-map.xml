@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="introduction" path="introduction.html"/>
+   <appContext helpID="overview-of-daydial" path="Overview_of_DayDial.html"/>
+   <appContext helpID="about-this-user-guide" path="About_This_User_Guide.html"/>
+   <appContext helpID="chapter-1-getting-started" path="chapter_1.html"/>
+   <appContext helpID="chapter-2" path="chapter_2.html"/>
+   <appContext helpID="Editor" path="Editor.html"/>
+   <appContext helpID="calendar-1" path="Calendar.html"/>
+   <appContext helpID="chart" path="Chart.html"/>
+   <appContext helpID="file-management" path="File_Management.html"/>
+   <appContext helpID="Editor-1" path="chapter_3.html"/>
+   <appContext helpID="adding-event-blocks-1" path="t_Adding_Event_Blocks.html"/>
+   <appContext helpID="deleting-event-blocks-1" path="t_Deleting_Event_Blocks.html"/>
+   <appContext helpID="modifying-event-blocks-Editor-pane"
+               path="Modifying_Editor_Pane.html"/>
+   <appContext helpID="chapter-4" path="chapter_4.html"/>
+   <appContext helpID="adding-and-deleting-calendar-columns"
+               path="Add_Del_Cal_Col.html"/>
+   <appContext helpID="modifying-event-blocks-calendar-pane"
+               path="Mod_Ev_Bl_Cal_Pane.html"/>
+   <appContext helpID="chapter-5" path="chapter_5.html"/>
+   <appContext helpID="managing-data-in-local-storage"
+               path="Managing_Data_Local_Storage.html"/>
+   <appContext helpID="managing-data-in-json-files" path="Managing_Data_JSON.html"/>
+   <appContext helpID="saving_data_in_files" path="saving_data_in_files.html"/>
+   <appContext helpID="loading_data_from_files" path="loading_data_from_files.html"/>
+   <appContext helpID="appendix-a" path="Appendix_A.html"/>
+   <appContext helpID="appendix-b" path="Appendix_B.html"/>
+   <appContext helpID="downloading-the-daydial-github-repository"
+               path="Downloading_Repository.html"/>
+   <appContext helpID="daydial-local-hosting" path="Local_Hosting.html"/>
+   <appContext helpID="appendix-b" path="troubleshooting.html"/>
+   <appContext helpID="Untitled" path="glossary.html"/>
+   <appContext helpID="daydial" path="12h.html"/>
+   <appContext helpID="daydial" path="24h.html"/>
+   <appContext helpID="daydial" path="00.html"/>
+   <appContext helpID="Editor_0" path="arch.html"/>
+   <appContext helpID="Editor_0" path="calendar_0.html"/>
+   <appContext helpID="Editor_0" path="calendarchart-divider.html"/>
+   <appContext helpID="Editor_0" path="chart-view.html"/>
+   <appContext helpID="daydial" path="clock_chart.html"/>
+   <appContext helpID="Editor_0" path="column.html"/>
+   <appContext helpID="daydial" path="daydial.html"/>
+   <appContext helpID="daydial" path="Dial_direction.html"/>
+   <appContext helpID="daydial" path="Dial_range.html"/>
+   <appContext helpID="Editor_0" path="editor_0.html"/>
+   <appContext helpID="Editor_0" path="event_block.html"/>
+   <appContext helpID="Editor_0" path="file_management_0.html"/>
+   <appContext helpID="daydial" path="Now.html"/>
+   <appContext helpID="daydial" path="ring.html"/>
+   <appContext helpID="Editor_0" path="time_boxing.html"/>
+   <appContext helpID="license" path="license.html"/>
+</map>

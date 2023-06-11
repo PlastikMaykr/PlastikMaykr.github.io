@@ -1,0 +1,46 @@
+var keywords=[{w:"00",p:["p0"]},{w:"12h",p:["p1"]},{w:"24h",p:["p2"]},{w:"About",p:["p3"]},{w:"This",p:["p3"]},{w:"User",p:["p3","p24"]},{w:"Guide",p:["p3"]},{w:"Adding",p:["p4","p35"]},{w:"and",p:["p4"]},{w:"Deleting",p:["p4","p36"]},{w:"Calendar",p:["p4","p7"]},{w:"Columns",p:["p4"]},{w:"Appendix",p:["p5","p6"]},{w:"A",p:["p5"]},{w:"B",p:["p6"]},{w:"Clock",p:["p8"]},{w:"Chart",p:["p8","p25"]},{w:"Dial",p:["p9","p10"]},{w:"direction",p:["p9"]},{w:"range",p:["p10"]},{w:"Downloading",p:["p11"]},{w:"the",p:["p11"]},{w:"DayDial",p:["p11","p14","p20","p24","p27"]},{w:"GitHub",p:["p11"]},{w:"Repository",p:["p11"]},{w:"Blocks",p:["p12","p17","p18","p35","p36"]},{w:"Editor",p:["p12","p18"]},{w:"Save/Load",p:["p13"]},{w:"Local",p:["p14","p16"]},{w:"Hosting",p:["p14"]},{w:"Managing",p:["p15","p16"]},{w:"Data",p:["p15","p16","p32","p34"]},{w:"in",p:["p15","p16","p34"]},{w:"JSON",p:["p15"]},{w:"Files",p:["p15","p32","p34"]},{w:"Storage",p:["p16"]},{w:"Modifying",p:["p17","p18"]},{w:"Event",p:["p17","p18","p28","p35","p36"]},{w:"(Calendar",p:["p17"]},{w:"Pane)",p:["p17","p18"]},{w:"(Blocks",p:["p18"]},{w:"Now",p:["p19"]},{w:"Overview",p:["p20"]},{w:"of",p:["p20"]},{w:"arch",p:["p21"]},{w:"Calendar/Chart",p:["p22"]},{w:"divider",p:["p22"]},{w:"Getting",p:["p23"]},{w:"Started",p:["p23"]},{w:"Interface",p:["p24"]},{w:"view",p:["p25"]},{w:"column",p:["p26"]},{w:"block",p:["p28"]},{w:"Glossary",p:["p29"]},{w:"Introduction",p:["p30"]},{w:"License",p:["p31"]},{w:"Loading",p:["p32"]},{w:"from",p:["p32"]},{w:"ring",p:["p33"]},{w:"Saving",p:["p34"]},{w:"time",p:["p37"]},{w:"boxing",p:["p37"]},{w:"Troubleshooting",p:["p38"]},{w:"Context",p:["p39"]},{w:"Sensitive",p:["p39"]},{w:"Help",p:["p39"]}];
+var ph={};
+ph["p0"]=[0];
+ph["p1"]=[1];
+ph["p2"]=[2];
+ph["p3"]=[3, 4, 5, 6];
+ph["p4"]=[7, 8, 9, 10, 11];
+ph["p5"]=[12, 13];
+ph["p6"]=[12, 14];
+ph["p7"]=[10];
+ph["p8"]=[15, 16];
+ph["p9"]=[17, 18];
+ph["p30"]=[54];
+ph["p10"]=[17, 19];
+ph["p32"]=[56, 31, 57, 34];
+ph["p31"]=[55];
+ph["p12"]=[25, 26];
+ph["p34"]=[59, 31, 32, 34];
+ph["p11"]=[20, 21, 22, 23, 24];
+ph["p33"]=[58];
+ph["p14"]=[22, 28, 29];
+ph["p36"]=[9, 37, 25];
+ph["p13"]=[27];
+ph["p35"]=[7, 37, 25];
+ph["p16"]=[30, 31, 32, 28, 35];
+ph["p38"]=[62];
+ph["p15"]=[30, 31, 32, 33, 34];
+ph["p37"]=[60, 61];
+ph["p18"]=[36, 37, 25, 40, 26, 39];
+ph["p17"]=[36, 37, 25, 38, 39];
+ph["p39"]=[63, 64, 65];
+ph["p19"]=[41];
+ph["p21"]=[44];
+ph["p20"]=[42, 43, 22];
+ph["p23"]=[47, 48];
+ph["p22"]=[45, 46];
+ph["p25"]=[16, 50];
+ph["p24"]=[22, 5, 49];
+ph["p27"]=[22];
+ph["p26"]=[51];
+ph["p29"]=[53];
+ph["p28"]=[37, 52];
+var keywordsInfo = {
+    keywords: keywords,
+    ph: ph
+}

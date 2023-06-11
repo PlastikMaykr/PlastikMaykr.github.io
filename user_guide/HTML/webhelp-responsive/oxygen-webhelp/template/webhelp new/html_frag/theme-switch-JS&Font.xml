@@ -1,0 +1,5 @@
+<span>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"/>
+    <script src="${oxygen-webhelp-template-dir}/js/theme-switch.js"/>
+</span>
