@@ -6,6 +6,8 @@ __DayDial__ makes it possible to present and arrange your activities in two dist
 
 __DayDial__ is designed to help you manage your time more effectively by providing a visual representation of your schedule and tasks.
 
+*Note*: This is an early test deployment of a future open source project. The final location (URL) of DayDial will be changed in the future. Please back up your app data regularly to be able to import it back to the new version of the app in the new repository.
+
 ## Installation
 Go to https://plastikmaykr.github.io to use __DayDial__. No installation required. 
 
@@ -19,7 +21,7 @@ This project is currently not open for contributions, but it will be in the near
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). This means you are free to share and adapt the material, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. You may not use the material for commercial purposes. For details, visit the Creative Commons website at https://creativecommons.org/licenses/by-nc/4.0/.
 
 ## Version
-DayDial 1.0.0 <span>&copy;</span> 2023
+DayDial 1.0.1 <span>&copy;</span> 2023
 
 ## Credit
 The web application was written by [PlastikMaykr](https://twitter.com/PlastikMaykr)
